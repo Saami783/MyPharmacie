@@ -1,0 +1,43 @@
+@model List<MyPharmacie.Data.Medicaments>
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Medicaments</title>
+</head>
+<body>
+
+    <table id="example" class="table table-striped" style="width: 100%">
+      <thead>
+          <tr>
+              <th>Medicament</th>
+              <th>Description</th>
+              <th>Substance Active</th>
+              <th>Classe</th>
+              <th>Categorie</th>
+              <th>CIP</th>
+              <th>Prix</th>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach (var item in Model)
+          {
+              <tr> 
+                  <td>@item.NomMedicament</td>
+                  <td>@item.Description</td>
+                  <td>@item.SubstanceActive</td>
+                  <td>@item.Classe</td>
+                  <td>@item.Categorie</td>
+                  <td>@item.CIP</td>
+                  <td>@item.Prix€</td>
+              </tr>
+          }
+      </tbody>
+    </table>
+
+</body>
+</html>
